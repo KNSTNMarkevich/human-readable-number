@@ -1,6 +1,4 @@
-
-
-module.exports =function toReadable (number) {
+function toReadable (number) {
     units = [
         'zero',
         'one',
@@ -72,9 +70,6 @@ module.exports =function toReadable (number) {
         else if (number % 10 === 0 && number % 100 !==0){
             return `${hundreds[tempHundreds -1]} ${dozens[tempDozens -1]}`
         }
-        else if (tempDozens == 0 && tempUnits != 0){
-            return `${hundreds[tempHundreds -1]} ${units[tempUnits]}`
-        }
         else if (tempDozens == 1 && tempUnits != 0){
             return `${hundreds[tempHundreds -1]} ${firstDozen[tempUnits]}`
         }
@@ -83,3 +78,37 @@ module.exports =function toReadable (number) {
         }
     }
 }
+
+
+
+
+console.log(toReadable(0))
+console.log(toReadable(1))
+console.log(toReadable(9))
+console.log(toReadable(11))
+console.log(toReadable(19))
+console.log(toReadable(20))
+console.log(toReadable(19))
+console.log(toReadable(21))
+console.log(toReadable(33))
+console.log(toReadable(99))
+console.log(toReadable(100))
+console.log(toReadable(900))
+console.log(toReadable(110))
+console.log(toReadable(990))
+console.log(toReadable(111))
+console.log(toReadable(112))
+console.log(toReadable(284))
+console.log(toReadable(739))
+
+
+
+// let number = 183;
+// let arr = number.toString().split('');
+// let tempHundreds = arr.shift()
+// console.log(arr)
+// console.log(tempHundreds)
+
+
+// let arr = [0,2,3,4,5,1,4,2,3,4,5]
+// console.log(arr.indexOf())
